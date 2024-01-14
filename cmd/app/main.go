@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	. "ascii/banners"
 	. "ascii/internal"
 )
 
@@ -23,7 +24,7 @@ func main() {
 		log.Fatalln("Invalid font")
 	}
 
-	output, maxlen := GetAscii(arg, data)
+	output, maxlen := GetAsciiJustify(arg, data)
 
 	_, cols := GetTerminalSize()
 

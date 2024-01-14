@@ -9,7 +9,7 @@ func GetAscii(text, data string) (string, int) {
 
 	text = strings.ReplaceAll(text, "\\n", "\n")
 
-	s := customSplit(text)
+	s := CustomSplit(text)
 
 	var result, subresult string
 	var maxlen int
@@ -79,7 +79,7 @@ func CreateMap(s string) map[rune][]string {
 	return table
 }
 
-func customSplit(s string) []string {
+func CustomSplit(s string) []string {
 	var result []string
 	var word string
 
