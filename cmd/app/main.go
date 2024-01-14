@@ -24,13 +24,7 @@ func main() {
 		log.Fatalln("Invalid font")
 	}
 
-	output, maxlen := GetAsciiJustify(arg, data)
-
-	_, cols := GetTerminalSize()
-
-	if IsValidTerminal(maxlen, cols) {
-		log.Fatalln("Invalid terminal size")
-	}
+	output := GetAsciiJustify(arg, data)
 
 	fmt.Print(output)
 }
