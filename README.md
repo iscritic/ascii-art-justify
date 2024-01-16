@@ -16,9 +16,9 @@ ASCII Art Justify is a command-line utility for generating ASCII art text with l
 
 - Some **banner** files with a specific graphical template representation using ASCII can be used. 
 
-  - [shadow](shadow.txt)
-  - [standard](standard.txt)
-  - [thinkertoy](thinkertoy.txt)
+  - [shadow](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+  - [standard](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+  - [thinkertoy](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 
 ### Usage
