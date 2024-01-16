@@ -37,16 +37,16 @@ func GetAsciiJustify(text, data string) string {
 		maxlen, nwords := getMaxlen(subs, table)
 		_, cols := GetTerminalSize()
 
-		spaceTokens := cols - 68 - maxlen
+		spaceTokens := cols - maxlen
 
 		spacecosts := distributeCandies(spaceTokens, nwords-1)
 		//
 
+		fmt.Println(spacecosts)
+
 		words := strings.Fields(subs)
 
-		var j int
-
-		for _, word := range words {
+		for i, word := range words {
 			for i := 0; i < 8; i++ {
 				for _, char := range word {
 					if art, ok := table[char]; ok {
@@ -54,11 +54,31 @@ func GetAsciiJustify(text, data string) string {
 						// fmt.Println(subsubresult[i])
 					}
 				}
-				subsubresult[i] += strings.Repeat(" ", spacecosts[j])
-				if j < len(spacecosts)-1 {
-					j++
-				}
+			}
 
+			// for i := 0; i < 8; i++ {
+			// 	subsubresult[i] += strings.Repeat(" ", spacecosts[j])
+			// }
+			if i == 0 {
+				subsubresult[0] += strings.Repeat(" ", 102)
+				subsubresult[1] += strings.Repeat(" ", 102)
+				subsubresult[2] += strings.Repeat(" ", 102)
+				subsubresult[3] += strings.Repeat(" ", 102)
+				subsubresult[4] += strings.Repeat(" ", 102)
+				subsubresult[5] += strings.Repeat(" ", 102)
+				subsubresult[6] += strings.Repeat(" ", 102)
+				subsubresult[7] += strings.Repeat(" ", 102)
+			}
+
+			if i == 1 {
+				subsubresult[0] += strings.Repeat(" ", 101)
+				subsubresult[1] += strings.Repeat(" ", 101)
+				subsubresult[2] += strings.Repeat(" ", 101)
+				subsubresult[3] += strings.Repeat(" ", 101)
+				subsubresult[4] += strings.Repeat(" ", 101)
+				subsubresult[5] += strings.Repeat(" ", 101)
+				subsubresult[6] += strings.Repeat(" ", 101)
+				subsubresult[7] += strings.Repeat(" ", 101)
 			}
 		}
 
