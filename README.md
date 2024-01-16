@@ -65,5 +65,5 @@ ASCII Art Justify is a command-line utility for generating ASCII art text with l
 
 ### Author
 
-- [arthkim](https://01.alem.school/git/arthkim)
 - [msarvaro](https://01.alem.school/git/msarvaro)
+- [arthkim](https://01.alem.school/git/arthkim)
