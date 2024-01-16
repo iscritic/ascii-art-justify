@@ -4,8 +4,6 @@ import (
 	"strings"
 )
 
-var table map[rune][]string
-
 func GetAscii(text, data string) (string, int) {
 	table := CreateMap(string(data))
 

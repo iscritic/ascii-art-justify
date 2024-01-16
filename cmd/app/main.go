@@ -10,21 +10,29 @@ import (
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		log.Fatalln("At least 2 arguments are required")
-	}
-	arg := os.Args[1]
-
-	if arg == "" {
+	if len(os.Args) < 2 || len(os.Args) > 4 {
+		log.Println("Usage: go run . [OPTION] [STRING] [BANNER]")
 		return
 	}
 
-	data, err := FontPicker()
+	align, text, font, err := CheckArgsJustify()
 	if err != nil {
-		log.Fatalln("Invalid font")
+		log.Println(err)
+		return
 	}
 
-	output := GetAsciiJustify(arg, data)
+	if text == "" {
+		fmt.Println("Text argument is empty")
+		return
+	}
+
+	data, err := FontPicker(font)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	output := AsciiJustify(text, data, align)
 
 	fmt.Print(output)
 }

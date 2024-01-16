@@ -13,13 +13,8 @@ const (
 	ThinkertoyHash = "64285e4960d199f4819323c4dc6319ba34f1f0dd9da14d07111345f5d76c3fa3"
 )
 
-func FontPicker() (string, error) {
-	font := "standard"
+func FontPicker(font string) (string, error) {
 	errf := errors.New("invalid font")
-
-	if len(os.Args) == 3 {
-		font = os.Args[2]
-	}
 
 	file, err := os.Open("./fonts/" + font + ".txt")
 	if err != nil {
