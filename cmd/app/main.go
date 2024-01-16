@@ -5,34 +5,39 @@ import (
 	"log"
 	"os"
 
-	. "ascii/banners"
-	. "ascii/internal"
+	"ascii/banners"
+	"ascii/internal"
 )
 
 func main() {
 	if len(os.Args) < 2 || len(os.Args) > 4 {
-		log.Println("Usage: go run . [OPTION] [STRING] [BANNER]")
+		fmt.Println("Usage: go run . [OPTION] [STRING] [BANNER]\n\nExample: go run . --align=right  something  standard")
 		return
 	}
 
-	align, text, font, err := CheckArgsJustify()
+	align, text, font, err := banners.CheckArgsJustify()
 	if err != nil {
-		log.Println(err)
+		fmt.Println(err)
+		return
+	}
+
+	if isValidText := internal.IsValidText(text); !isValidText {
+		fmt.Println("Usage: go run . [OPTION] [STRING] [BANNER]\n\nExample: go run . --align=right  something  standard	")
 		return
 	}
 
 	if text == "" {
-		fmt.Println("Text argument is empty")
+		log.Println("Text argument is empty")
 		return
 	}
 
-	data, err := FontPicker(font)
+	data, err := internal.FontPicker(font)
 	if err != nil {
 		log.Println(err)
 		return
 	}
 
-	output := AsciiJustify(text, data, align)
+	output := banners.AsciiJustify(text, data, align)
 
 	fmt.Print(output)
 }

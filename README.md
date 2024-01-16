@@ -23,6 +23,7 @@ ASCII Art Justify is a command-line utility for generating ASCII art text with l
 
 ### Usage
 
+```
 |$ go run . --align=center "hello" standard                                                                                 |
 |                                             _                _    _                                                       |
 |                                            | |              | |  | |                                                      |
@@ -60,6 +61,7 @@ ASCII Art Justify is a command-line utility for generating ASCII art text with l
 |                                                                                                      _|                   |
 |                                                                                                  _|_|                     |
 |$                                                                                                                          |
+```
 
 ### Author
 

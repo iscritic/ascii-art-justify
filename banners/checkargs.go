@@ -23,7 +23,7 @@ func CheckArgsJustify() (string, string, string, error) {
 	flag.Parse()
 
 	if *align != "" && !isValidAlignValue(*align) {
-		return "", "", "", fmt.Errorf("Invalid align value: %s", *align)
+		return "", "", "", fmt.Errorf("invalid align value: %s", *align)
 	}
 
 	args := flag.Args()
