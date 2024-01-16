@@ -1,10 +1,10 @@
-## ascii-art-justify
+# ASCII-ART-JUSTIFY
 
-### Objectives
+## Objectives
 
 ASCII Art Justify is a command-line utility for generating ASCII art text with left, right, and center alignment.
 
-### Instructions
+## Instructions
 
 - Some **alignment** files with a specific graphical template representation using ASCII can be used. 
 
@@ -21,7 +21,7 @@ ASCII Art Justify is a command-line utility for generating ASCII art text with l
   - [thinkertoy](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 
-### Usage
+## Usage
 
 ```
 |$ go run . --align=center "hello" standard                                                                                 |
@@ -63,7 +63,7 @@ ASCII Art Justify is a command-line utility for generating ASCII art text with l
 |$                                                                                                                          |
 ```
 
-### Author
+## Author
 
 - [msarvaro](https://01.alem.school/git/msarvaro)
 - [arthkim](https://01.alem.school/git/arthkim)
